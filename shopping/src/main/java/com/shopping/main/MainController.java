@@ -22,7 +22,7 @@ public class MainController {
 	
 	@GetMapping("/contact")
 	public String contact() {
-		return "/main/contact";
+		return "/main/contact"; 
 	}
 	
 	@GetMapping("/faq")

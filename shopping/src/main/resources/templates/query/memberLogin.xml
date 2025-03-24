@@ -34,5 +34,9 @@
 		VALUES (#{memberName}, #{memberGender}, #{memberBirth}, #{memberEmail}, #{memberPasswd}, #{memberCountry})
 	</insert>
 	
-
+		<!-- 마이페이지 -->
+	<select id="memberMyPage" parameterType="memberLogin">
+	SELECT MEMBER_EMAIL, MEMBER_NAME, MEMBER_BIRTH, MEMBER_GENDER
+	FROM QU_MEMBER WHERE MEMBER_ID = #{memberEmail}
+	</select>
 </mapper>

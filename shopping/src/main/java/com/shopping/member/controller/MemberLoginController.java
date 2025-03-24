@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import org.springframework.ui.Model;
 import com.shopping.member.service.MemberLoginService;
 import com.shopping.member.vo.MemberLoginVO;
 
-import ch.qos.logback.core.model.Model;
+
 import jakarta.servlet.http.HttpSession;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -81,5 +81,17 @@ public class MemberLoginController {
 
 		session.removeAttribute("signUpCompleted");
 		return "/main/completeSignUp";
+	}
+	
+	// 마이 페이지
+	@GetMapping("/mypage")
+	public String memberMyPage(Model model, MemberLoginVO memberLoginVO, RedirectAttributes ras, HttpSession session) {
+		MemberLoginVO memberLogin = (MemberLoginVO) session.getAttribute("memberLogin");
+		if (memberLogin == null) {
+			ras.addFlashAttribute("errorMsg", "Please log in to coutinue");
+			return "redirect:/login";
+		}
+		model.addAttribute("memberLoginVO", memberLoginVO);
+		return "/main/mypage";
 	}
 }

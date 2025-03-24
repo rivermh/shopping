@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>쇼핑몰 (이름미정)</title>
+        <title>Single Household Shopping Mall</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -30,10 +30,10 @@
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">MAIN</h1>
-                                <p class="lead fw-normal text-white-50 mb-4">여기 꾸며야함</p>
+                                <h1 class="display-5 fw-bolder text-white mb-2">Shopping Tailored for Singles</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Discover special products designed for single-person households</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Shop Now</a>
                                     <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
                                 </div>
                             </div>
@@ -51,22 +51,22 @@
                             <div class="row gx-5 row-cols-1 row-cols-md-2">
                                 <div class="col mb-5 h-100">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <h2 class="h5">Recommended Products</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 h-100">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <h2 class="h5">Subscribe for Convenience!</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 mb-md-0 h-100">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <h2 class="h5">Products Category</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col h-100">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <h2 class="h5">Customer Reviews</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                             </div>

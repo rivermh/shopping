@@ -26,7 +26,7 @@ public class MainController {
 	}
 	
 	@GetMapping("/faq")
-	public String faq() {
+	public String faq() { 
 		return "/main/faq";
 	}
 	

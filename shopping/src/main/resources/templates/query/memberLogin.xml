@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shopping.member.dao.MemberLoginDao">
+
+	<resultMap type="memberLogin" id="memberLoginMap">
+		<id column="MEMBER_IDX" property="memberIdx" />
+		<result column="MEMBER_TYPE_ID" property="memberTypeId" />
+		<result column="MEMBER_NAME" property="memberName" />
+		<result column="MEMBER_GENDER" property="memberGender" />
+		<result column="MEMBER_BIRTH" property="memberBirth" />
+		<result column="MEMBER_EMAIL" property="memberEmail" />
+		<result column="MEMBER_PASSWD" property="memberPasswd" />
+		<result column="MEMBER_COUNTRY" property="memberCountry" />
+		<result column="MEMBER_JOIN_DATE" property="memberJoinDate" />
+	</resultMap>
+
+
+<!-- 로그인 -->
+<select id="loginProcess" parameterType="memberLogin" resultMap="memberLoginMap">
+    SELECT *
+    FROM SP_MEMBER
+    WHERE MEMBER_EMAIL = #{memberEmail} AND MEMBER_PASSWD = #{memberPasswd}
+</select>
+
+	
+	<!-- 이메일 중복체크 -->
+	<select id="emailCheck" parameterType="memberLogin" resultType="int">
+		SELECT COUNT(MEMBER_EMAIL) FROM SP_MEMBER WHERE MEMBER_EMAIL = #{memberEmail}
+	</select>
+	
+	<!-- 회원가입 insert -->
+	<insert id="memberInsert" parameterType="memberLogin">
+		INSERT INTO SP_MEMBER (MEMBER_NAME, MEMBER_GENDER, MEMBER_BIRTH, MEMBER_EMAIL, MEMBER_PASSWD, MEMBER_COUNTRY)
+		VALUES (#{memberName}, #{memberGender}, #{memberBirth}, #{memberEmail}, #{memberPasswd}, #{memberCountry})
+	</insert>
+	
+
+</mapper>

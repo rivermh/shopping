@@ -26,34 +26,36 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            
                 <!-- 로그인 여부 체크 -->
-                <c:choose>
-                    <c:when test="${not empty memberLogin}">
-                        <li class="nav-item">
-                            <c:if test="${memberLogin.memberTypeId == 1}">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/mypage">MyPage</a>
-                            </c:if>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Welcome, ${memberLogin.memberName}!</a>
-                        </li>
-                        <li class="nav-item">
-                            <form action="${pageContext.request.contextPath}/logout" method="POST" class="logout-form">
-                                <button class="btn btn-danger btn-sm" type="submit">LogOut</button>
-                            </form>
-                        </li>
-                    </c:when>
-                    <c:otherwise>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/login">Login</a></li>
-                                <li><a class="dropdown-item" href="/blog-post">Blog Post</a></li>
-                            </ul>
-                        </li>
-                    </c:otherwise>
-                </c:choose>
+               <c:choose>
+				    <c:when test="${not empty memberLogin}">
+				        <!-- Welcome + MyPage + Logout 드롭다운 -->
+				        <li class="nav-item dropdown">
+				            <a class="nav-link dropdown-toggle" id="navbarDropdownUser" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				                Welcome, ${memberLogin.memberName}!
+				            </a>
+				            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
+				                <c:if test="${memberLogin.memberTypeId == 1}">
+				                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/mypage">MyPage</a></li>
+				                </c:if>
+				                <li>
+				                    <form action="${pageContext.request.contextPath}/logout" method="POST">
+				                        <button class="dropdown-item" type="submit">Logout</button>
+				                    </form>
+				                </li>
+				            </ul>
+				        </li>
+				    </c:when>
+				    <c:otherwise>
+				        <li class="nav-item dropdown">
+				            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+				            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+				                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/login">Login</a></li>
+				                <li><a class="dropdown-item" href="/blog-post">Blog Post</a></li>
+				            </ul>
+				        </li>
+				    </c:otherwise>
+				</c:choose>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
@@ -69,12 +71,10 @@
 			        <li><a class="dropdown-item" href="/pricing">Pricing</a></li>
 			        <li><a class="dropdown-item" href="/faq">문의사항</a></li>
 			    </ul>
-				</li>
-                
+				</li>           
             </ul>
         </div>
     </div>
 </nav>
-
 </body>
 </html>

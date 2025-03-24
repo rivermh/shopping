@@ -115,8 +115,7 @@
 							<i class="bi bi-question-circle"></i>
 						</div>
 						<div class="h5">Support center</div>
-						<p class="text-muted mb-0">Browse FAQ's and support articles
-							to find solutions.</p>
+						<p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
 					</div>
 					<div class="col">
 						<div
@@ -157,20 +156,5 @@
 	<script src="/resources/include/js/jquery-3.7.1.min.js"></script>
 	<script src="/resources/include/js/common.js"></script>
 	<script src="/resources/include/login/login.js"></script>
-	<script>
-       $(function() {
-           let errorMsg = "${errorMsg}";
-           if(errorMsg) {
-               alert(errorMsg);
-               errorMsg = "";
-           }
-       });     
-       $(function() {        
-           if (${not empty memberLogin}) {            
-               let memberName = "${memberLogin.memberName}";
-               alert("Welcome! This is ${memberLogin.memberName}'s shopping.");
-           } 
-       });      
-   </script>
 </body>
 </html>

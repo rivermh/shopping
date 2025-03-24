@@ -28,7 +28,7 @@ public class MemberLoginController {
 	
 	@GetMapping("/login")
 	public String loginProcess(Model model) {
-		log.info("member login page move");
+		log.info("member login page move"); 
 		return "/main/login";
 	}
 	

@@ -29,7 +29,7 @@ public class MemberLoginController {
 	@GetMapping("/login")
 	public String loginProcess(Model model) {
 		log.info("member login page move"); 
-		return "/main/login";
+		return "/main/login"; 
 	}
 	
 	@PostMapping("/login")

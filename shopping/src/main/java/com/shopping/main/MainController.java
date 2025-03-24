@@ -9,7 +9,7 @@ public class MainController {
 	public String main() {
 		return "/main/index";
 	}
-	
+	 
 	@GetMapping("/about")
 	public String about() {
 		return "/main/about";

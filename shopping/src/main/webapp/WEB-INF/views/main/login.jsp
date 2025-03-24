@@ -40,7 +40,7 @@
 									class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
 									<i class="bi bi-envelope"></i>
 								</div>
-								<h1 class="fw-bolder">로그인</h1>
+								<h1 class="fw-bolder">Login</h1>
 								<p class="lead fw-normal text-muted mb-0">We'd love to hear
 									from you</p>
 							</div>
@@ -49,39 +49,33 @@
 									<form id="loginForm">
 										<input type="hidden" name="memberTypeId" id="memberTypeId"
 											value="1">
-
 										<!-- Email input-->
 										<div class="form-floating mb-3">
 											<input class="form-control" id="memberEmail" type="text"
-												placeholder="Please Enter Your Email Address"
+												placeholder=""
 												name="memberEmail" /> <label for="memberEmail">Email
 												Address</label>
 										</div>
-
 										<!-- Password input-->
 										<div class="form-floating mb-3">
 											<input class="form-control" id="memberPasswd" type="password"
-												placeholder="Please Enter Your Password" name="memberPasswd" />
+												placeholder="" name="memberPasswd" />
 											<label for="memberPasswd">Password</label>
 										</div>
-
 										<!-- Submit Button-->
 										<div class="d-grid">
 											<button class="btn btn-primary btn-lg" id="loginBtn"
 												type="button">login</button>
 										</div>
-
 										<!-- Signup Button -->
 										<div class="d-grid mt-3">
-											<a class="btn btn-secondary btn-lg" href="/signup">Sign
-												Up</a>
+											<a class="btn btn-secondary btn-lg" href="/signup">SignUp</a>
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 					</c:when>
-
 					<c:otherwise>
 						<!-- 로그인 후 UI -->
 						<div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5 text-center">
@@ -95,7 +89,6 @@
 						</div>
 					</c:otherwise>
 				</c:choose>
-
 				<!-- Contact cards-->
 				<div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
 					<div class="col">
@@ -175,7 +168,7 @@
        $(function() {        
            if (${not empty memberLogin}) {            
                let memberName = "${memberLogin.memberName}";
-               alert("Welcome! This is ${memberLogin.memberName}'s quiz.");
+               alert("Welcome! This is ${memberLogin.memberName}'s shopping.");
            } 
        });      
    </script>
